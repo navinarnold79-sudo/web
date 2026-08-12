@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Website</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f5f7ff;
+            color: #222;
+        }
+
+        /* NAVBAR */
+
+        nav {
+            background: #111827;
+            color: white;
+
+            padding: 20px 8%;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav h2 {
+            color: #60a5fa;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #60a5fa;
+        }
+
+
+        /* HERO */
+
+        .hero {
+            min-height: 90vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+
+            color: white;
+
+            background:
+                linear-gradient(
+                    rgba(37, 99, 235, 0.85),
+                    rgba(79, 70, 229, 0.85)
+                ),
+                url("https://images.unsplash.com/photo-1497366754035-f200968a6e72");
+
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-content {
+            animation: slideUp 1.5s ease;
+        }
+
+        .hero h1 {
+            font-size: 55px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 35px;
+        }
+
+
+        /* BUTTON */
+
+        .btn {
+            display: inline-block;
+
+            padding: 15px 35px;
+
+            background: white;
+            color: #2563eb;
+
+            text-decoration: none;
+
+            border-radius: 30px;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            transform: scale(1.1);
+
+            background: #60a5fa;
+
+            color: white;
+
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+
+        /* ABOUT */
+
+        .about {
+            padding: 80px 10%;
+
+            text-align: center;
+
+            background: white;
+        }
+
+        .about h2 {
+            font-size: 35px;
+            margin-bottom: 20px;
+        }
+
+        .about p {
+            max-width: 700px;
+
+            margin: auto;
+
+            color: #666;
+
+            line-height: 1.8;
+        }
+
+
+        /* SERVICES */
+
+        .services {
+            padding: 80px 8%;
+
+            text-align: center;
+        }
+
+        .services h2 {
+            font-size: 35px;
+            margin-bottom: 40px;
+        }
+
+        .service-container {
+            display: flex;
+
+            justify-content: center;
+
+            gap: 25px;
+
+            flex-wrap: wrap;
+        }
+
+
+        /* CARDS */
+
+        .card {
+            width: 280px;
+
+            padding: 35px;
+
+            background: white;
+
+            border-radius: 15px;
+
+            box-shadow:
+                0 5px 20px rgba(0,0,0,0.08);
+
+            transition: 0.4s;
+        }
+
+        .card:hover {
+            transform: translateY(-15px) scale(1.03);
+
+            box-shadow:
+                0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .card h3 {
+            color: #2563eb;
+
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            color: #666;
+
+            line-height: 1.6;
+        }
+
+
+        /* CONTACT */
+
+        .contact {
+            background: #111827;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 70px 20px;
+        }
+
+        .contact h2 {
+            font-size: 35px;
+
+            margin-bottom: 20px;
+        }
+
+        .contact p {
+            margin-bottom: 25px;
+        }
+
+
+        /* FOOTER */
+
+        footer {
+            background: #030712;
+
+            color: #aaa;
+
+            text-align: center;
+
+            padding: 20px;
+        }
+
+
+        /* ANIMATION */
+
+        @keyframes slideUp {
+
+            from {
+                opacity: 0;
+
+                transform:
+                    translateY(60px);
+            }
+
+            to {
+                opacity: 1;
+
+                transform:
+                    translateY(0);
+            }
+
+        }
+
+
+        /* MOBILE */
+
+        @media (max-width: 600px) {
+
+            nav {
+                flex-direction: column;
+
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 0 8px;
+            }
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- NAVBAR -->
+
+    <nav>
+
+        <h2>My Website</h2>
+
+        <div>
+
+            <a href="#home">Home</a>
+
+            <a href="#about">About</a>
+
+            <a href="#services">Services</a>
+
+            <a href="#contact">Contact</a>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- HERO -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <h1>Welcome to My Website</h1>
+
+            <p>
+                Modern • Simple • Professional
+            </p>
+
+            <a href="#contact" class="btn">
+                Contact Us
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ABOUT -->
+
+    <section class="about" id="about">
+
+        <h2>About Us</h2>
+
+        <p>
+            We create modern and professional
+            websites for businesses and individuals.
+            Our goal is to build websites that are
+            beautiful, fast and easy to use.
+        </p>
+
+    </section>
+
+
+
+    <!-- SERVICES -->
+
+    <section class="services" id="services">
+
+        <h2>Our Services</h2>
+
+        <div class="service-container">
+
+
+            <div class="card">
+
+                <h3>🌐 Web Design</h3>
+
+                <p>
+                    Beautiful and modern website
+                    designs for your business.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>💻 Development</h3>
+
+                <p>
+                    Fast and responsive websites
+                    using modern technology.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>📱 Responsive</h3>
+
+                <p>
+                    Websites that work perfectly
+                    on mobile, tablet and desktop.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- CONTACT -->
+
+    <section class="contact" id="contact">
+
+        <h2>Contact Us</h2>
+
+        <p>
+            📞 +91 8438731924
+        </p>
+
+        <p>
+            📧 navinarnold79@gmail.com
+        </p>
+
+        <a
+            href="tel:+918438731924"
+            class="btn">
+
+            Call Now
+
+        </a>
+
+    </section>
+
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        © 2026 My Website
+
+    </footer>
+
+
+</body>
+</html>
